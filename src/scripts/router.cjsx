@@ -1,5 +1,3 @@
-require '../../public/main.css'
-
 React = require 'react'
 window.React = React
 

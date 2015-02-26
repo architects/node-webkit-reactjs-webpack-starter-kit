@@ -33,8 +33,12 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.css$/, loaders: ['style', 'css']},
-      { test: /\.cjsx$/, loaders: ['coffee', 'cjsx']},
-      { test: /\.coffee$/, loader: 'coffee' }
+      { test: /\.less/, loader: "style!css!less?outputStyle=expanded"},
+      { test: /\.cjsx$/, loaders: ['react-hot', 'coffee', 'cjsx']},
+      { test: /\.(jpg|png|gif|svg)/, loader: 'file-loader'},
+      { test: /\.coffee$/, loader: 'coffee' },
+      { test: /\.(eot|ttf|woff)/, loader: 'file-loader'}
+
     ]
   }
 };

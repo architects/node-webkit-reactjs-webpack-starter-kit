@@ -1,7 +1,7 @@
 Link          = require('react-router').Link
 RouteHandler  = require('react-router').RouteHandler
 
-require "../styles/main.scss"
+require "../styles/main.less"
 
 module.exports = React.createClass
   displayName: 'App'

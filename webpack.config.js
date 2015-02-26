@@ -27,9 +27,11 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.css$/, loaders: ['style', 'css']},
-      { test: /\.scss$/, loader: "style!css!sass?outputStyle=expanded"},
+      { test: /\.less/, loader: "style!css!less?outputStyle=expanded"},
       { test: /\.cjsx$/, loaders: ['react-hot', 'coffee', 'cjsx']},
-      { test: /\.coffee$/, loader: 'coffee' }
+      { test: /\.(jpg|png|gif|svg)/, loader: 'file-loader'},
+      { test: /\.coffee$/, loader: 'coffee' },
+      { test: /\.(eot|ttf|woff)/, loader: 'file-loader'}
     ]
   }
 };

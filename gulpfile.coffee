@@ -13,7 +13,7 @@ $ = require('gulp-load-plugins')()
 
 # CSS
 gulp.task('css', ->
-  gulp.src(['src/styles/*.sass', 'src/styles/*.scss'])
+  gulp.src(['src/styles/*.less', 'src/styles/*.less'])
     .on('error', (err) ->
       gutil.log err
     )
