@@ -6,9 +6,9 @@
   },
   "window": {
     "frame": true,
-    "toolbar": true,
-    "height": 600,
-    "width": 980,
+    "toolbar": false,
+    "height": 800,
+    "width": 1280,
     "resizable": true,
     "position": "mouse"
   }

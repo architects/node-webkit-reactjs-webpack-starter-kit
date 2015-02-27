@@ -19,11 +19,26 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new webpack.IgnorePlugin(/vertx/) // https://github.com/webpack/webpack/issues/353
+    new webpack.IgnorePlugin(/vertx/), // https://github.com/webpack/webpack/issues/353
+    new webpack.ProvidePlugin({
+      "_": "underscore"
+    }),
+
   ],
+
   resolve: {
-    extensions: ['', '.js', '.cjsx', '.coffee']
+    extensions: ['', '.js', '.cjsx', '.coffee', '.less', '.ttf', '.eot', '.woff'],
+    modulesDirectories:[
+      'node_modules',
+      'bower_components'
+    ]
   },
+
+  externals:{
+    "jquery": "var jQuery",
+    "$"     : "var jQuery"
+  },
+
   module: {
     loaders: [
       { test: /\.css$/, loaders: ['style', 'css']},

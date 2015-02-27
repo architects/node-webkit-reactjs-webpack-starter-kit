@@ -1,11 +1,11 @@
-React = require 'react'
+React = require 'react/addons'
 window.React = React
 
-Router = require('react-router')
-Route = Router.Route
+Router  = require('react-router')
+Route   = Router.Route
 
-App = require './app'
-HomePage = require './pages/home'
+App       = require './app'
+HomePage  = require './pages/home'
 
 routes = (
   <Route handler={App}>
@@ -14,5 +14,5 @@ routes = (
 )
 
 Router.run(routes, (Handler) ->
-  React.render <Handler/>, document.body
+  React.render <Handler/>, document.getElementById('app')
 )
